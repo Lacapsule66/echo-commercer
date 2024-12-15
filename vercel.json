@@ -5,8 +5,8 @@
   "framework": "nextjs",
   "rewrites": [
     {
-      "source": "/admin/:path*",
-      "destination": "/src/app/(studio)/admin/:path*"
+      "source": "/admin/(.*)",
+      "destination": "/src/app/(studio)/admin/$1"
     },
     {
       "source": "/(.*)",
