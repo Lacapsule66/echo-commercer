@@ -1,16 +1,16 @@
 {
+  "version": 2,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
   "rewrites": [
     {
-      "source": "/admin",
-      "destination": "/admin"
-    },
-    {
       "source": "/admin/:path*",
-      "destination": "/admin/:path*"
+      "destination": "/src/app/(studio)/admin/:path*"
     },
     {
-      "source": "/:path*",
-      "destination": "/:path*"
+      "source": "/(.*)",
+      "destination": "/src/app/(site)/$1"
     }
   ]
 }

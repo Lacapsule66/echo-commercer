@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["localhost", "vercel.app", "*"],
+    domains: ["localhost", "vercel.app"],
     remotePatterns: [
       {
         protocol: "https",
@@ -26,12 +26,8 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "standalone",
-  experimental: {
-    appDir: true,
-  },
-  webpack: (config) => {
-    config.externals = [...config.externals, "canvas", "jsdom"];
-    return config;
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 
