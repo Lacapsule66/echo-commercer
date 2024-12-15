@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/admin",
+      "destination": "/src/app/admin"
+    },
+    {
+      "source": "/admin/(.*)",
+      "destination": "/src/app/admin/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/src/app/(site)/$1"
     }
