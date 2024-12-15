@@ -11,6 +11,7 @@ export default function HomePage() {
   return (
     <>
       <Home />
+      <div>ok</div>
     </>
   );
 }
