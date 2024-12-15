@@ -2,21 +2,15 @@
   "rewrites": [
     {
       "source": "/admin",
-      "destination": "/src/app/(studio)/admin/[[...index]]"
+      "destination": "/admin"
     },
     {
-      "source": "/admin/(.*)",
-      "destination": "/src/app/(studio)/admin/[[...index]]/$1"
+      "source": "/admin/:path*",
+      "destination": "/admin/:path*"
     },
     {
-      "source": "/(.*)",
-      "destination": "/src/app/(site)/$1"
-    }
-  ],
-  "builds": [
-    {
-      "src": "next.config.js",
-      "use": "@vercel/next"
+      "source": "/:path*",
+      "destination": "/:path*"
     }
   ]
 }
