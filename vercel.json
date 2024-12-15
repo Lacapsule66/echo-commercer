@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/admin",
-      "destination": "/src/app/admin"
+      "destination": "/src/app/(studio)/admin/[[...index]]"
     },
     {
       "source": "/admin/(.*)",
-      "destination": "/src/app/admin/$1"
+      "destination": "/src/app/(studio)/admin/[[...index]]/$1"
     },
     {
       "source": "/(.*)",
