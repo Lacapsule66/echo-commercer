@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "vercel.app", "*"],
     remotePatterns: [
       {
         protocol: "https",
@@ -25,6 +25,7 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
+  output: "standalone",
 };
 
 module.exports = nextConfig;
