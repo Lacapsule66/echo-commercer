@@ -1,8 +1,14 @@
 {
   "rewrites": [
     {
-      "source": "/((?!api/.*).*)",
-      "destination": "/index.html"
+      "source": "/(.*)",
+      "destination": "/src/app/(site)/$1"
+    }
+  ],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
     }
   ]
 }
