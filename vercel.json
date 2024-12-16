@@ -5,10 +5,6 @@
   "framework": "nextjs",
   "rewrites": [
     {
-      "source": "/admin/(.*)",
-      "destination": "/src/app/(studio)/admin/[[...index]]/$1"
-    },
-    {
       "source": "/(.*)",
       "destination": "/src/app/(site)/$1"
     }
